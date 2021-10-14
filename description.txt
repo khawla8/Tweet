@@ -1,0 +1,10 @@
+Tweet--Say what's on your mind on Tweet
+A site that can read what comes to the mind of a person and can also add what comes to mind
+
+Framework: 
+-HTML
+-CSS
+-JavaScript
+
+
+https://khawla8.github.io/Tweet/

@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    :root {
+  --msger-bg: #DBFFB5;
+  --border: 10px solid #4B543C;
+  --left-msg-bg: #4B543C;
+}
+body {
+    font-family: "Times New Roman", Times, serif;
+    color: #4B543C;
+    background-color: #ffff;
+    }    
+    
+    hr.new2 {
+  border-top: 3px dashed #4B543C;
+}
+    
+.msg-bubble {
+ margin-left: 40px;
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--left-msg-bg);
+}
+.left-msg .msg-bubble {
+  border-bottom-left-radius: 0;
+}
+.msger-chat {
+   text-align: center;
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+.msger-chat::-webkit-scrollbar {
+  width: 6px;
+}
+.msger-chat::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.msger-chat::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+}
+.msg {
+  color: #ffff;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.msg:last-of-type {
+  margin: 0;
+}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #4B543C;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 30%;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  width: 150px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border-radius: 20%;
+  margin-bottom: 10px;
+  border: 5px solid #4B543C;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  color: white;
+  border-radius: 20%;
+  max-width: 300px;
+  padding: 15px;
+  background-color: #4B543C;
+  margin-bottom: 0px;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  color: #4B543C;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: white;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: white;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: white;
+  color: #4B543C;
+  border-radius: 10%;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #F30722;
+ 
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div> 
+<h1 style="font-size:80px; text-align: center; margin: 10px;">
+    <i class="material-icons" style="font-size:100px">rate_review</i>
+    Tweet 
+</h1>
+</div>
+
+<h4 style="font-size:30px; text-align: center; margin: 10px;">Say what's on your mind on Tweet</h4>
+    <hr class="new2" width="95%">  
+    <br>
+    <br>
+  <main class="msger-chat">
+    <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+        “Never underestimate the power of dreams and the influence of the human spirit. We are all the same in this notion: The potential for greatness lives within each of us.”
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+
+    <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+          Hi, welcome to SimpleChat! Go ahead and send me a message.
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+      <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+          “To achieve greatness one should live as if they will never die.” 
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+      <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+         People do not decide to become extraordinary. They decide to accomplish extraordinary things.
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+      <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+          Always dream and shoot higher than you know you can do. Don’t bother just to be better than your contemporaries or predecessors. Try to be better than yourself.
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+      <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+         “Be not afraid of greatness; some are born great, some achieve greatness, and others have greatness thrust upon them.” 
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+    <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+        “Never underestimate the power of dreams and the influence of the human spirit. We are all the same in this notion: The potential for greatness lives within each of us.”
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+
+    <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+          Hi, welcome to SimpleChat! Go ahead and send me a message.
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+      <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+          “To achieve greatness one should live as if they will never die.” 
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+      <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+         People do not decide to become extraordinary. They decide to accomplish extraordinary things.
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+      <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+          Always dream and shoot higher than you know you can do. Don’t bother just to be better than your contemporaries or predecessors. Try to be better than yourself.
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+      <div class="msg left-msg">
+      <div class="msg-bubble">
+        <div class="msg-text">
+         “Be not afraid of greatness; some are born great, some achieve greatness, and others have greatness thrust upon them.” 
+        </div>
+      </div>
+        <div class="msg-img" >
+          <i class="material-icons" style="font-size:50px; color: #4B543C;">mode_edit</i>
+        </div>
+    </div>
+  </main>
+    
+
+<button class="open-button" onclick="openForm()">
+    <h1 style="font-size:40px; text-align: center; margin: 0px;">Tweet
+    </h1>
+        </button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Tweet</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Publishing</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Delete</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
